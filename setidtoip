@@ -1,0 +1,13 @@
+#!/bin/sh -
+
+### BEGIN INIT INFO
+# Provides:          SetIDtoIP
+# Required-Start:    ssh
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Set ID number to IP address
+# Description:       Configure value in /boot/id.txt to IP address
+### END INIT INFO
+
+/usr/bin/python /etc/init.d/setip.py
