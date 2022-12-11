@@ -10,7 +10,7 @@ sudo pip3 install numpy --upgrade
 sudo pip3 install picamera2 --upgrade
 
 echo 99 | sudo tee -a /boot/id.txt
-sudo wget -o /etc/init.d/setidtoip https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setidtoip 
-sudo wget -o /etc/init.d/setip.py https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setip.py
+sudo wget -O /etc/init.d/setidtoip https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setidtoip 
+sudo wget -O /etc/init.d/setip.py https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setip.py
 sudo chmod 755 /etc/init.d/setidtoip
 sudo update-rc.d setidtoip defaults
