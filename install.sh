@@ -14,6 +14,9 @@ sudo pip3 install numpy --upgrade
 sudo pip3 install picamera2 --upgrade
 
 
+add "cma=400M" to /boot/cmdline.txt
+
+
 
 notes:
 Requirement already satisfied: pillow in /usr/lib/python3/dist-packages (from picamera2) (8.1.2)
