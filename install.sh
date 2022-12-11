@@ -1,7 +1,3 @@
-sudo raspi-config
-- enable ssh
-- enable i2c
-
 wget -O install_pivariety_pkgs.sh https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh 
 chmod +x install_pivariety_pkgs.sh
 ./install_pivariety_pkgs.sh -p libcamera_dev
@@ -13,16 +9,8 @@ sudo apt install -y python3-pyqt5 python3-prctl libatlas-base-dev ffmpeg python3
 sudo pip3 install numpy --upgrade
 sudo pip3 install picamera2 --upgrade
 
+echo 99 | sudo tee -a /boot/id.txt
+sudo wget -o /etc/init.d/setidtoip https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setidtoip 
+sudo wget -o /etc/init.d/setip.py https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setip.py
+sudo chmod 755 /etc/init.d/setidtoip
 
-add "cma=400M" to /boot/cmdline.txt
-
-
-
-notes:
-Requirement already satisfied: pillow in /usr/lib/python3/dist-packages (from picamera2) (8.1.2)
-Requirement already satisfied: python-prctl in /usr/lib/python3/dist-packages (from picamera2) (1.7)
-Requirement already satisfied: simplejpeg in /usr/lib/python3/dist-packages (from picamera2) (1.6.4)
-Requirement already satisfied: numpy in /usr/local/lib/python3.9/dist-packages (from picamera2) (1.23.5)
-Requirement already satisfied: v4l2-python3 in /usr/lib/python3/dist-packages (from picamera2) (0.3.1)
-Requirement already satisfied: piexif in /usr/lib/python3/dist-packages (from picamera2) (1.1.3)
-Requirement already satisfied: PiDNG in /usr/lib/python3/dist-packages (from picamera2) (4.0.9)
