@@ -8,6 +8,7 @@ sudo apt install -y python3-kms++
 sudo apt install -y python3-pyqt5 python3-prctl libatlas-base-dev ffmpeg python3-pip
 sudo pip3 install numpy --upgrade
 sudo pip3 install picamera2 --upgrade
+sudo pup3 install pygame
 
 echo "Setting up auto IP configuration based on id.txt" 
 echo 99 | sudo tee -a /boot/id.txt
