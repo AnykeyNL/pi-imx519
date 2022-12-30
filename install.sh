@@ -21,3 +21,6 @@ sudo update-rc.d setidtoip defaults
 echo "Setting up auto login and running the listening script" 
 sudo wget -O /etc/systemd/system/getty@tty1.service.d/scanlisten.conf https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/scanlisten.conf
 
+echo "Setting up webserver" 
+sudo mkdir /3dscan
+sudo apt -y install apache2
