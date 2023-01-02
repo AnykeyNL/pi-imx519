@@ -11,6 +11,13 @@ sudo pip3 install picamera2 --upgrade
 sudo pip3 install pygame
 sudo pip3 install pyserial
 
+sudo apt -y install libraw-dev
+sudo apy -y install git
+git clone https://github.com/letmaik/rawpy
+cd rawpy
+sudo pip -y install numpy cython
+sudo pip install .
+
 echo "Setting up auto IP configuration based on id.txt" 
 echo 99 | sudo tee -a /boot/id.txt
 sudo wget -O /etc/init.d/setidtoip https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setidtoip 
