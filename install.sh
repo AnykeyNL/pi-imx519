@@ -19,7 +19,7 @@ sudo pip -y install numpy cython
 sudo pip install .
 
 echo "Setting up auto IP configuration based on id.txt" 
-echo 99 | sudo tee -a /boot/id.txt
+echo 100 | sudo tee -a /boot/id.txt
 sudo wget -O /etc/init.d/setidtoip https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setidtoip 
 sudo wget -O /etc/init.d/setip.py https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setip.py
 sudo chmod 755 /etc/init.d/setidtoip
@@ -29,5 +29,4 @@ echo "Setting up auto login and running the listening script"
 sudo wget -O /etc/systemd/system/getty@tty1.service.d/scanlisten.conf https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/scanlisten.conf
 
 echo "Setting up webserver" 
-sudo mkdir /3dscan
 sudo apt -y install apache2
