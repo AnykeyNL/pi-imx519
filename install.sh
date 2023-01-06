@@ -20,7 +20,7 @@ sudo pip install numpy cython
 sudo pip install .
 
 echo "Setting up auto IP configuration based on id.txt" 
-echo 100 | sudo tee -a /boot/id.txt
+echo 99 | sudo tee -a /boot/id.txt
 echo 1 | sudo tee -a /boot/group.txt
 sudo wget -O /etc/init.d/setidtoip https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setidtoip 
 sudo wget -O /etc/init.d/setip.py https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/setip.py
