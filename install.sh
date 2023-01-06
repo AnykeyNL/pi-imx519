@@ -1,3 +1,4 @@
+sudo apt update
 echo "Installing the 16MP camera drivers"
 wget -O install_pivariety_pkgs.sh https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh 
 chmod +x install_pivariety_pkgs.sh
@@ -25,8 +26,9 @@ sudo wget -O /etc/init.d/setip.py https://raw.githubusercontent.com/AnykeyNL/pi-
 sudo chmod 755 /etc/init.d/setidtoip
 sudo update-rc.d setidtoip defaults
 
+echo "Setting up webserver" 
+sudo apt -y install apache2
+
 echo "Setting up auto login and running the listening script" 
 sudo wget -O /etc/systemd/system/getty@tty1.service.d/scanlisten.conf https://raw.githubusercontent.com/AnykeyNL/pi-imx519/main/scanlisten.conf
 
-echo "Setting up webserver" 
-sudo apt -y install apache2
