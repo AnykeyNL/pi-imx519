@@ -15,7 +15,7 @@ sudo apt -y install libraw-dev
 sudo apt -y install git
 git clone https://github.com/letmaik/rawpy
 cd rawpy
-sudo pip -y install numpy cython
+sudo pip install numpy cython
 sudo pip install .
 
 echo "Setting up auto IP configuration based on id.txt" 
