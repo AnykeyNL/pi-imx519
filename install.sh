@@ -12,7 +12,7 @@ sudo pip3 install pygame
 sudo pip3 install pyserial
 
 sudo apt -y install libraw-dev
-sudo apy -y install git
+sudo apt -y install git
 git clone https://github.com/letmaik/rawpy
 cd rawpy
 sudo pip -y install numpy cython
